@@ -1,6 +1,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[frenchb]{babel}
+\usepackage[french]{babel}
 \usepackage{amsmath, amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -13,7 +13,11 @@
 \usepackage{fancyhdr}
 \usepackage{url}
 \usepackage{siunitx}
+\usepackage{lipsum}
 \usepackage[left=3cm,right=3cm,top=3cm,bottom=5cm]{geometry}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=numeric,sorting=ynt]{biblatex}
+\usepackage{ragged2e}
 
 
 
@@ -76,7 +80,7 @@
 
         % Titre du rapport
         \rule{\linewidth}{0.2 mm} \\[0.4 cm]
-        {\Large\bfseries{} \titre{} \par} \
+        {\large{}\bfseries{} \titre{} \par} \
         \rule{\linewidth}{0.2 mm} \\[1.0 cm]
 
         % Nom de l'étudiant
@@ -100,7 +104,7 @@
         \vspace{1.5cm}
 
         % Bas de page
-        \begin{minipage}{0.4\textwidth}
+        \begin{minipage}[t]{0.4\textwidth}
             \begin{flushleft}
                 \emph{\textbf{Organisme d'accueil}}\\
                 \text{\nomentreprise}\\
@@ -108,13 +112,13 @@
             \end{flushleft}
         \end{minipage}
         ~
-        \begin{minipage}{0.4\textwidth}
+        \begin{minipage}[t]{0.4\textwidth}
             \begin{flushright}
-                \emph{\textbf{Tuteur école:}} \\
+                \emph{\textbf{Tuteur école :}} \\
                 \tuteurecole{} \\
             \end{flushright}
             \begin{flushright}
-                \emph{\textbf{Tuteur entreprise:}} \\
+                \emph{\textbf{Tuteur entreprise :}} \\
                 \tuteurentreprise{} \\
             \end{flushright}
         \end{minipage}\\[2cm]
@@ -123,5 +127,11 @@
 
 
     \end{titlepage}
+    \newpage{}
+}
+
+% Table des matières
+\newcommand{\tabledematieres}{
+    \tableofcontents{}
     \newpage{}
 }
