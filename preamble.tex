@@ -18,8 +18,12 @@
 \usepackage{csquotes}
 \usepackage[backend=biber,style=numeric,sorting=ynt]{biblatex}
 \usepackage{ragged2e}
+\usepackage{parskip}
+\usepackage{csquotes}
+\usepackage{tocloft}
 
-
+\setlength{\parskip}{1em}
+\setlength{\parindent}{1.5em}
 
 % ---------- Page de garde -----------
 \newcommand{\logoentreprise}[1]{\renewcommand{\logoentreprise}{#1}}
@@ -49,7 +53,7 @@
     \pagestyle{fancy}
     \fancyheadoffset{1cm}
     \setlength{\headheight}{2cm}
-    \lhead{\includegraphics[scale=0.5]{figures/tps.png}}
+    \lhead{\includegraphics[scale=0.5]{figures/cover/tps.png}}
     \rhead{\nouppercase{\leftmark}}
     \rfoot{\thepage}
     \cfoot{}
@@ -58,6 +62,9 @@
 
 % Créer la page de garde
 \newcommand{\fairepagedegarde}{
+    \begingroup
+    \setlength{\parskip}{0em}
+    \setlength{\parindent}{0em}
     \begin{titlepage}
 
         \centering{} %Centraliser le contenu
@@ -66,11 +73,11 @@
         \begin{figure}
             \begin{subfigure}{.5\textwidth}
                 \centering{}
-                \includegraphics[width=0.6\textwidth]{figures/tps.png}\par\vspace{1cm}
+                \includegraphics[width=0.6\textwidth]{figures/cover/tps.png}\par\vspace{1cm}
             \end{subfigure}%
             \begin{subfigure}{.5\textwidth}
                 \centering{}
-                \includegraphics[width=0.6\textwidth]{figures/imt.png}\par\vspace{1cm} %%
+                \includegraphics[width=0.6\textwidth]{figures/cover/imt.png}\par\vspace{1cm} %%
             \end{subfigure}
         \end{figure}
 
@@ -108,7 +115,7 @@
             \begin{flushleft}
                 \emph{\textbf{Organisme d'accueil}}\\
                 \text{\nomentreprise}\\
-                \includegraphics[width=0.4\textwidth]{\logoentreprise} \\
+                \includegraphics*[width=0.4\textwidth]{\logoentreprise} \\
             \end{flushleft}
         \end{minipage}
         ~
@@ -128,6 +135,7 @@
 
     \end{titlepage}
     \newpage{}
+    \endgroup
 }
 
 % Table des matières

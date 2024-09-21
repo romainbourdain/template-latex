@@ -17,7 +17,7 @@
 \pagenumbering{roman} % On numérote le début du rapport en nombres Romains (pas moi haha)
 
 % ---------- Informations du rapport ----------
-\logoentreprise{figures/entreprise.png}
+\logoentreprise{figures/cover/entreprise.png}
 \nomentreprise{Icube}
 
 % Titre du rapport
@@ -41,7 +41,7 @@
 \annee{2023/2024}
 
 % Les dates du stage
-\dates{03/06/2024 \- 23/08/2024}
+\dates{03/06/2024 - 23/08/2024}
 
 
 % Le nom et adresse du tuteur école
@@ -60,60 +60,86 @@
 %----------- Initialisation -------------------
 \fairemarges{} % Afficher les marges
 \fairepagedegarde{} % Afficher la page de garde
+\setcounter{figure}{0}
 
 
 
 %----------- Remerciements -------------------
 \section*{Remerciements}
-\input{chapters/remerciements}
+\addcontentsline{toc}{section}{Remerciements}
+\input{content/remerciements}
 \newpage{}
 
 %------------ Table des matières ----------------
 \tabledematieres{}
 
-
-
 %------------ Corps du rapport ----------------
 \pagenumbering{arabic} % On numerote maintenant en chiffres arabes
 
 %------------ Introduction ----------------
-
-\section{Introduction}
-\input{chapters/introduction}
+\section*{Introduction}
+\addcontentsline{toc}{section}{Introduction}
+\input{content/introduction.tex}
 \newpage{}
 
-%------------ Présentation de l'entreprise ----------------
-\section{Présentation de l'entreprise}
-\input{chapters/presentation}
+\section{Présentation du laboratoire}
+\input{content/chapters/1_presentation.tex}
 \newpage{}
 
-%------------ Travail effectué ----------------
-\section{Travail effectué}
-\input{chapters/travail}
+\section{Contexte du stage}
+\input{content/chapters/2_context.tex}
+\newpage{}
+
+\section{Analyses lexicale et syntaxique}
+\input{content/chapters/3_syntax.tex}
+\newpage{}
+
+\section{Production de code intermédiaire}
+\input{content/chapters/4_intermediate_code.tex}
+\newpage{}
+
+\section{Interprétation}
+\input{content/chapters/5_interpretation.tex}
+\newpage{}
+
+\section{Outils pour le développement}
+\input{content/chapters/6_tools.tex}
+\newpage{}
+
+\section{Tests du code source}
+\input{content/chapters/7_test.tex}
+\newpage{}
+
+\section{Améliorations futures}
+\input{content/chapters/8_improvements.tex}
 \newpage{}
 
 %------------ Conclusion personnelle ----------------
-\section{Conclusion personnelle}
-\input{chapters/conclusion_perso}
+\section*{Conclusion personnelle}
+\addcontentsline{toc}{section}{Conclusion personnelle}
+\input{content/conclusion_perso}
 \newpage{}
 
 %------------ Conclusion ----------------
-\section{Conclusion}
-\input{chapters/conclusion}
+\section*{Conclusion}
+\addcontentsline{toc}{section}{Conclusion}
+\input{content/conclusion}
 \newpage{}
 
 %------------ Bibliographie ----------------
-\section{Bibliographie}
-\input{chapters/biblio}
+\section*{Bibliographie}
+\addcontentsline{toc}{section}{Bibliographie}
+\input{content/biblio}
 \newpage{}
 
 %------------ Annexe ----------------
-\section{Annexe}
-\input{chapters/annexe}
+\section*{Annexe}
+\addcontentsline{toc}{section}{Annexe}
+\input{content/annexe}
 \newpage{}
 
 %----------- Abstract -------------------
-\input{chapters/abstract}
+\input{content/abstract}
 \newpage{}
 
 
